@@ -21,9 +21,9 @@ void	ft_swap(int *a, int *b)
 	*b = x;
 }
 
-int    *sorarr(int *arr, int size)
+int	*sorarr(int *arr, int size)
 {
-    int	j;
+	int	j;
 	int	i;
 
 	i = 0;
@@ -35,30 +35,29 @@ int    *sorarr(int *arr, int size)
 			ft_swap(&arr[j], &arr[i]);
 			i = 0;
 		}
-        else
-		    i++;
+		else
+			i++;
 	}
-    return (arr);
+	return (arr);
 }
 
-int    *sorted(t_list *a)
+int	*sorted(t_list *a)
 {
-    int *arr;
-    int i;
-    int j;
+	int	*arr;
+	int	i;
+	int	j;
 
-    i = 0;
-    j = ft_lstsize(a);
-    arr = malloc(sizeof(int) * j);
-    if (!arr)
-        return (NULL);
-    while (a)
-    {
-        arr[i] = a->content;
-        a = a->next;
-        i++;
-    }
-    arr = sorarr(arr, j);
-    return(arr);
+	i = 0;
+	j = ft_lstsize(a);
+	arr = malloc(sizeof(int) * j);
+	if (!arr)
+		return (NULL);
+	while (a)
+	{
+		arr[i] = a->content;
+		a = a->next;
+		i++;
+	}
+	arr = sorarr(arr, j);
+	return (arr);
 }
-

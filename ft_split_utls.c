@@ -6,11 +6,25 @@
 /*   By: soer-ret <soer-ret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 00:01:04 by soer-ret          #+#    #+#             */
-/*   Updated: 2025/02/03 11:14:17 by soer-ret         ###   ########.fr       */
+/*   Updated: 2025/02/28 17:59:41 by soer-ret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+char	**ft_freee(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+	return (NULL);
+}
 
 size_t	ft_strlen(const char *s)
 {
