@@ -6,7 +6,7 @@
 /*   By: soer-ret <soer-ret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 23:52:26 by soer-ret          #+#    #+#             */
-/*   Updated: 2025/02/28 21:40:33 by soer-ret         ###   ########.fr       */
+/*   Updated: 2025/03/06 20:40:21 by soer-ret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,9 +86,9 @@ long	ft_atoi(const char *nb, char **args, t_list **a)
 	while (nb[i] >= 48 && nb[i] <= 57)
 	{
 		k = k * 10 + (nb[i] - 48);
-		if (k >= 2147483648 || k <= -2147483647)
-			ft_erreo(a, args);
 		i++;
 	}
+	if ((k * j) >= 2147483648 || (k * j) <= -2147483649)
+		ft_erreo(a, args);
 	return (j * k);
 }
